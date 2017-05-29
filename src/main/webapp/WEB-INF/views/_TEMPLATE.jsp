@@ -4,6 +4,7 @@
     Author     : formation
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-    </body>
+        <c:import url="../_MENU.jsp"></c:import>
+        <contenu>
+            CONTENU ICI
+        </contenu>
+        <c:import url="../_PIED.jsp"></c:import>
+</body>
 </html>
