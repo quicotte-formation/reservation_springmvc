@@ -27,6 +27,26 @@ public class HotelController {
     @Autowired
     private HotelServiceCRUD service;
     
+    @RequestMapping(value = "/ajouter", method = RequestMethod.POST)
+    public String ajouterPOST( @ModelAttribute("hotel") Hotel h ){
+        
+        // Ajout en DB
+        service.save(h);
+        
+        // Redirection ecran liste
+        return "redirect:/hotel/lister";
+    }
+    
+    @RequestMapping(value = "/ajouter", method = RequestMethod.GET)
+    public String ajouterGET(Model m){
+        
+        Hotel h = new Hotel();
+        
+        m.addAttribute("hotel",h );
+        
+        return "/hotel/ajouter.jsp";
+    }
+    
     @RequestMapping(value="/modifier", method = RequestMethod.POST)
     public String modifierPOST( @ModelAttribute(value = "hotel") Hotel monHotel){
         

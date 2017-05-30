@@ -15,6 +15,7 @@
     </head>
     <body>
         <c:import url="../_MENU.jsp"></c:import>
+        <a href="<spring:url value="/hotel/ajouter"/>">Ajouter</a>
         <contenu>
             <table>
                 <c:forEach items="${listeHotels}" var="h">
