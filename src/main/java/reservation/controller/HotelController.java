@@ -21,7 +21,7 @@ import reservation.service.HotelServiceCRUD;
  * @author formation
  */
 @Controller
-@RequestMapping(value="/hotel", method = RequestMethod.GET)
+@RequestMapping(value="/hotel")
 public class HotelController {
     
     @Autowired

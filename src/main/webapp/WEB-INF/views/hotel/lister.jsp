@@ -23,6 +23,7 @@
                         <td>${h.adresse.rue}</td>
                         <td>
                             <a href='<spring:url value="/hotel/supprimer/${h.id}"/>'>Supprimer</a>
+                            <a href='<spring:url value="/hotel/modifier/${h.id}"/>'>Modifier</a>
                         </td>
                     </tr>
                 </c:forEach>

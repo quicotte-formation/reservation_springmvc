@@ -17,8 +17,15 @@
     <body>
         <c:import url="../_MENU.jsp"></c:import>
         <contenu>
-            CONTENU ICI
-        </contenu>
-        <c:import url="../_PIED.jsp"></c:import>
+        <form:form modelAttribute="hotel" action="${cheminModif}">
+            <form:hidden path="id"/>
+            <label>Nom hotel:</label>
+            <form:input path="nom"/>
+            <label>Rue:</label>
+            <form:textarea path="adresse.rue"/>
+            <input type="Submit"/>
+        </form:form>
+    </contenu>
+    <c:import url="../_PIED.jsp"></c:import>
 </body>
 </html>
