@@ -20,13 +20,14 @@ import reservation.service.HotelServiceCRUD;
  * @author formation
  */
 @Controller
+@RequestMapping(value="/hotel", method = RequestMethod.GET)
 public class HotelController {
     
     @Autowired
     private HotelServiceCRUD service;
     
     
-    @RequestMapping(value = "/hotel/supprimer/{idHotel}", method = RequestMethod.GET)
+    @RequestMapping(value = "/supprimer/{idHotel}" )
     public String supprimer( @PathVariable(value = "idHotel") long id){
         
         // Supprime db DB
@@ -36,7 +37,7 @@ public class HotelController {
         return "redirect:/hotel/lister";
     }
     
-    @RequestMapping(value = "/hotel/lister", method = RequestMethod.GET)
+    @RequestMapping(value = "/lister")
     public String lister(Model model){
         
         // Récupère liste hotels et la passe en attrib à la vue
