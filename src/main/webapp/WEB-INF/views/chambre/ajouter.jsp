@@ -20,13 +20,17 @@
     <body>
         <c:import url="../_MENU.jsp"></c:import>
         <contenu>
-            <h1>Ajout d'un nouvel hotel</h1>
-            <form:form modelAttribute="hotel">
-                <label>Nom hotel:</label>
+            <h1>Ajout d'une nouvelle chambre</h1>
+            <form:form modelAttribute="chambre">
+                <label>Hotel:</label>
+                <form:select items="${hotels}" itemLabel="nom" itemValue="id" path="hotel.id"/>
+                <br>
+                <label>Nom chambre:</label>
                 <form:input path="nom"/>
-                <label>Rue:</label>
-                <form:textarea path="adresse.rue"/>
-                <input type="Submit"/>
+                <br>
+                <label>Prix:</label>
+                <form:input path="prix"/>
+                <input type="submit"/>
             </form:form>
         </contenu>
     <c:import url="../_PIED.jsp"></c:import>

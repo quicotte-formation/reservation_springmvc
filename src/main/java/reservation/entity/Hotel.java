@@ -83,7 +83,8 @@ public class Hotel implements Serializable {
 
     @Override
     public String toString() {
-        return "reservation.entity.Hotel[ id=" + id + " ]";
+        
+        return "reservation.entity.Hotel[ id=" + id + " " + nom + "]";
     }
     
 }

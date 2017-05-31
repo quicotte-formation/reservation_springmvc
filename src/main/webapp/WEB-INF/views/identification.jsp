@@ -22,7 +22,7 @@
             <label>Identifiant</label>
             <form:input path="identifiant"/>
             <label>M-d-p</label>
-            <form:input path="motDePasse"/>
+            <form:password path="motDePasse"/>
             <input type="submit"/>
         </form:form>
     </contenu>
