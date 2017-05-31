@@ -1,3 +1,3 @@
 <div class="pied">
-    MENU
+    - Copyright 2017 Quicoote Formation -
 </div>
