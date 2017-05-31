@@ -20,6 +20,14 @@ import reservation.dto.UtilisateurDTO;
 @Controller
 public class UtilisateurController {
     
+    @RequestMapping(value = "/deconnexion", method = RequestMethod.GET)
+    public String deconnexion(HttpSession session){
+        
+//        session.invalidate(); Supprime touts attrib sessions
+          session.removeAttribute("adminConnecte");
+          return "redirect:/identification";
+    }
+    
     @RequestMapping(value = "/identification", method = RequestMethod.POST)
     public String identificationPOST( @ModelAttribute("utilDTO") UtilisateurDTO dto, HttpSession session){
         
