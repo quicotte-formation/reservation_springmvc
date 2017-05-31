@@ -20,7 +20,7 @@
     <body>
         <c:import url="../_MENU.jsp"></c:import>
         <contenu>
-            <h1>Modification hotel</h1>
+            <h1>Ajout d'un nouvel hotel</h1>
         <form:form modelAttribute="hotel">
             <label>Nom hotel:</label>
             <form:input path="nom"/>
